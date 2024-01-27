@@ -4,15 +4,13 @@ h1 {
 }
 
 div {
-    background-color: #555555;
-    padding: 5px;
-    border-style: solid;
-    border: 200px;
-    
+    border-radius: 50%;
 }
 
 body {
     background-color: #181818;
 }
 
-
+canvas{
+    margin: 0 auto;
+}

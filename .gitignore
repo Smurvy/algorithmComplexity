@@ -2,6 +2,7 @@ venv/
 
 *.pyc
 __pycache__/
+database/__pycache__/
 
 instance/
 
@@ -12,3 +13,5 @@ htmlcov/
 dist/
 build/
 *.egg-info/
+
+test.py

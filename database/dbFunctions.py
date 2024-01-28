@@ -1,4 +1,5 @@
 import sqlite3
+import math
 
 def createConnection(dbFile):
     conn = None
@@ -16,3 +17,12 @@ def getVals(conn):
     rows = cur.fetchall()
 
     return rows
+
+def pushVals(conn):
+    cur = conn.cursor()
+
+    for x in range(50):
+        cur.execute("INSERT INTO function (x,y) VALUES (?,?)",
+                    (x,math.pow(x,2)))
+    
+    conn.commit()

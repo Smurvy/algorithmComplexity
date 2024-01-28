@@ -12,10 +12,22 @@ def homepage():
 
     data = db.getVals(conn)
     
+    
     labels = [row[0] for row in data]
     values = [row[1] for row in data]
 
     conn.close()
 
     return render_template('graph.html', labels=labels, values=values)
+
+@app.route('/update', methods=['POST'])
+def update():
+    conn = db.createConnection("database/database.db")
+    
+    db.pushVals(conn)
+
+    conn.close()
+    
+    return homepage()
+
 

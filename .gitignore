@@ -15,3 +15,5 @@ build/
 *.egg-info/
 
 test.py
+
+database/database.db-journal

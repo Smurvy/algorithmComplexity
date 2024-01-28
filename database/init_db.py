@@ -8,10 +8,6 @@ cur = connection.cursor()
 with open('database/schema.sql') as f:
     connection.executescript(f.read())
 
-for x in range(50):
-    cur.execute("INSERT INTO function (x,y) VALUES (?,?)",
-                (x,math.pow(x,2)))
-        
 
 connection.commit()
 connection.close()
